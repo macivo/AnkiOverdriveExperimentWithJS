@@ -1,7 +1,7 @@
 # ![](https://www.bfh.ch/dam/jcr:36ac8a9a-6176-44fe-8e69-064cffb38e5b/logo_l-xs-home-und-footer_de.svg) Bern University of Applied Sciences
 ### BTI3041 Project2 HS2021/22: AnkiOverdrive
 ### Student: Mac Müller
-### Advisor: Prof. Dr. Reto König
+### Advisor: Prof. Dr. Reto Koenig
 
 ------------
 #### ![](http://twemoji.maxcdn.com/36x36/1f4e3.png) Introduction
