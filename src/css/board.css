@@ -1,0 +1,96 @@
+.editorBoard {
+    display: inline-grid;
+    margin-top: -1px;
+    margin-left: -1px;
+    max-width: 95vw;
+}
+.trackPiece {
+    outline: 1px dashed;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: white;
+    aspect-ratio: 1;
+    position: relative;
+}
+.trackPiece:hover > button {
+    visibility: visible;
+}
+.trackPiece > svg{
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.trackPiece button{
+    width: 2em;
+    height: 2em;
+    border: none;
+    visibility: hidden;
+    background-color: transparent;
+    position: sticky;
+}
+.deleteButton{
+    float: right;
+}
+.rotationButton{
+    background-image:url("../icons/rotation.png");
+    background-size: 100% auto;
+    float: left;
+}
+.trackPiece.over {
+    border: 1px dotted #1464F4;
+}
+#editor{
+    height: 59vh;
+    padding-top: 2.5vh;
+}
+.editorTools{
+    display: inline-flex;
+}
+.editorTools .tool{
+    display: flex;
+    padding: 3vh 5vh;
+}
+.editorTools div img{
+    padding-right: 1vh;
+    pointer-events: none;
+}
+.editorTools div div{
+    display: grid;
+}
+.editorTools div div form {
+    display: grid;
+}
+.editorTools div div form label {
+    width: 7vh;
+    font-size: large;
+}
+.editorTools div div form input {
+    width: 7vh;
+    font-size: medium;
+}
+.editorTools div div button {
+    width: 4.5vh;
+    height: 4.5vh;
+    justify-self: end;
+    margin-top: 1vh;
+    font-size: x-large;
+    color: #1464F4;
+}
+#editorFunction {
+    height: 20.5vh;
+    background-color: #F0F0F0;
+    overflow: scroll;
+    white-space: nowrap;
+}
+/* Solid border */
+hr.solid {
+    border-top: 1px solid #F0F0F0;
+    color: white;
+}
+[draggable] {
+    user-select: none;
+}
+
+

@@ -1,0 +1,141 @@
+<!--
+ *   Anki Overdrive -- Track Editor Portable Version
+ *   Project 2 (BTI3041) 21, Bern University of Applied Sciences
+ *   Developer: Mac Müller
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Anki Overdrive</title>
+    <link rel="stylesheet" href="src/css/_main.css">
+    <!-- Source: https://jquery.com/ -->
+    <script src="src/lib/jquery-3.6.0.min.js"></script>
+    <!-- Source: https://www.eclipse.org/paho/files/jsdoc/Paho.MQTT.html -->
+    <script src="src/lib/mqttws31.min.js"></script>
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <header>
+        <img class="bfhLogo" src="src/icons/BFH.png" alt="BFH_Logo">
+        <span class="mainLogo">ANKI OVERDRIVE</span>
+    </header>
+    <nav>
+        <span>Track Editor</span>
+        <label class="switch">
+            <input type="checkbox" class="naviClick" isChecked="false" autocomplete="off">
+            <span class="slider round"></span>
+        </label>
+        <span>Digital Twin</span>
+        <div class="setting" isClicked="false">
+            <span>Setting</span>
+            <img src="src/icons/setting.svg" alt="Setting logo">
+        </div>
+    </nav>
+    <main>
+        <!-- space for adding a view from router.js -->
+    </main>
+    <footer class="footer">
+        <p>&copy;Anki Overdrive: Track Editor Portable Version - Mac Müller</p>
+    </footer>
+</body>
+
+    <!-- Templates -->
+    <!-- Template /home -->
+    <template id="tpl-home">
+        <div id="editor">
+
+        </div>
+        <hr class="solid">
+        <div id="editorFunction">
+
+        </div>
+    </template>
+    <!-- Template /digital-twin -->
+    <template id="tpl-digital-twin">
+        <div id="digital-twin">
+        </div>
+        <hr class="solid">
+        <div id="controller">
+        </div>
+    </template>
+    <!-- Template /setting -->
+    <template id="tpl-setting">
+        <div class="settingWrapper">
+            <div class="settingOption">
+                <p>MQTT-Setting</p>
+                <form>
+                    <label for="MQTTHost">MQTT host: </label>
+                    <input type="text" id="MQTTHost" name="MQTTHost">
+                    <br>
+                    <label for="MQTTPort">MQTT port: </label>
+                    <input type="number" id="MQTTPort" name="MQTTPort">
+                    <br>
+                    <label for="MQTTBasepath">MQTT basepath: </label>
+                    <input type="text" id="MQTTBasepath" name="MQTTBasepath">
+                    <br>
+                    <label for="MQTTUsername">MQTT username:</label>
+                    <input type="text" id="MQTTUsername" name="MQTTUsername">
+                    <br>
+                    <label for="MQTTPassword">MQTT password:</label>
+                    <input type="password" id="MQTTPassword" name="MQTTPassword">
+                    <br>
+                    <br>
+                </form>
+                <button id="MQTTSave" >Save</button>
+            </div>
+            <div class="settingOption">
+                <p>Editor Setting</p>
+                <form>
+                    <label for="editorColumn">Column: </label>
+                    <br>
+                    <input type="number" id="editorColumn" name="editorColumn">
+                    <br>
+                    <label for="editorRow">Row: </label>
+                    <br>
+                    <input type="number" id="editorRow" name="editorRow">
+                    <br>
+                    <br>
+                </form>
+                <button id="boardSetting">Save</button>
+            </div>
+            <div class="settingOption">
+                <p>Connection status</p>
+                <button id="refreshStatus">Refresh</button>
+                <form>
+                    <label>MQTT client: </label>
+                    <label class="mqttStatus">-</label>
+                </form>
+                <form>
+                    <label>Host(Anki) : </label>
+                    <label class="hostStatus">-</label>
+                </form>
+                <form>
+                    <label>Cars: </label>
+                    <label class="carsStatus">-</label>
+                </form>
+            </div>
+            <div class="settingOption">
+                <p>Import/Export</p>
+                <form>
+                </form>
+                <label for="fileImport">Import</label>
+                <br>
+                <input id="fileImport"name="fileImport" type="file" size="50">
+                <button id="import">Import</button>
+                <form>
+                </form>
+                <label for="fileExport">Export</label>
+                <br>
+                <button id="export">Export</button>
+                <form>
+                </form>
+                <label for="printing">Download images as png-files for printing</label>
+                <br>
+                <button id="saveAsPng">Get images</button>
+                <br>
+            </div>
+        </div>
+    </template>
+</html>
